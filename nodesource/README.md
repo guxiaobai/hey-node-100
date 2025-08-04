@@ -19,5 +19,6 @@ sudo apt-get install -y nodejs
 ## Ref
 
 * ~~<https://nodejs.org/en/download/package-manager#debian-and-ubuntu-based-linux-distributions>~~
+* ~~<https://mirrors.ustc.edu.cn/help/nodesource.html>~~
 * <https://github.com/nodesource/distributions/wiki/Repository-Manual-Installation>
 * <https://github.com/nodesource/distributions>
