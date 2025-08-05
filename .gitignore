@@ -2,3 +2,4 @@
 .vagrant
 ansible.cfg
 hosts.ini
+node-v22.18.0-linux-x64*

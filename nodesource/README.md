@@ -1,5 +1,7 @@
 # NodeSource Node.js Binary Distributions
 
+> Node 官方已经提供了自己的预编译版本
+
 |本期版本|上期版本
 |:---:|:---:
 `Tue Aug  8 13:22:33 CST 2023` | -
