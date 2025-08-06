@@ -1,4 +1,4 @@
-# NodeSource Node.js Binary Distributions
+# ~~NodeSource Node.js Binary Distributions~~
 
 > Node 官方已经提供了自己的预编译版本
 
