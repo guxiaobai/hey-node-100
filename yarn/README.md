@@ -4,27 +4,25 @@
 
 |本期版本|上期版本
 |:---:|:---:
-`Tue Aug  8 13:22:33 CST 2023` | -
+`Wed Apr 22 17:43:21 CST 2026` | `Tue Aug  8 13:22:33 CST 2023`
 
 ## macOS
-
-> `13.5`
 
 ```bash
 brew install yarn
 ```
 
-
-
----
-
-
+## Debian / Ubuntu
 
 ```bash
-yarn config set registry https://registry.npm.taobao.org
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | sudo tee /etc/apt/keyrings/yarn-archive-keyring.gpg > /dev/null
+echo "deb [signed-by=/etc/apt/keyrings/yarn-archive-keyring.gpg] https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 ```
 
 
+```bash
+yarn config set registry https://registry.npmmirror.com
+```
 
 
 
