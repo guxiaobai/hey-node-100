@@ -1,8 +1,8 @@
 ---
 - hosts: all
-  become: yes
   vars:
-    node_version: "v22.18.0"
+    # https://nodejs.org/en/download/archive/v24.15.0
+    node_version: "v24.15.0"
     node_dist: "node-{{ node_version }}-linux-x64"
     node_url: "https://nodejs.org/dist/{{ node_version }}/{{ node_dist }}.tar.xz"
     install_dir: "/usr/local/{{ node_dist }}"
@@ -10,7 +10,7 @@
     - name: Download Node.js tarball
       get_url:
         url: "{{ node_url }}"
-        dest: "/vagrant/{{ node_dist }}.tar.xz"
+        dest: "/tmp/{{ node_dist }}.tar.xz"
         mode: '0644'
 
     - name: create node directory
@@ -21,7 +21,7 @@
 
     - name: Extract Node.js to {{ install_dir }}
       unarchive:
-        src: "/vagrant/{{ node_dist }}.tar.xz"
+        src: "/tmp/{{ node_dist }}.tar.xz"
         dest: "{{ install_dir }}"
         remote_src: yes
         extra_opts: [--strip-components=1]
