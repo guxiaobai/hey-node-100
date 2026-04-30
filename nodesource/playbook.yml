@@ -1,12 +1,18 @@
 ---
 - hosts: metal
-  become: yes
   gather_facts: false
   vars:
     NODE_MAJOR: 22
     key: /etc/apt/keyrings/nodesource.gpg
 
   tasks:
+  - name: install dependencies
+    apt:
+      name: "{{ item }}"
+      state: present
+    with_items:
+      - gpg
+      
   - name: Add NodeSource Key
     apt_key:
       url: https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key
