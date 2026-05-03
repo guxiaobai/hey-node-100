@@ -1,6 +1,7 @@
 ---
 - hosts: all
   vars:
+    # Official Node.js 
     # https://nodejs.org/en/download/archive/v24.15.0
     node_version: "v24.15.0"
     node_dist: "node-{{ node_version }}-linux-x64"
