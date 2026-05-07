@@ -1,5 +1,5 @@
 ---
-- hosts: metal
+- hosts: all
   gather_facts: false
   vars:
     NODE_MAJOR: 22
